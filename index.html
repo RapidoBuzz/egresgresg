@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<!--LINKS AND SOURCES-->
+
+<head>
+  <title>MultiCube | Home</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css" type="text/css">
+  <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+  <src rel="stylesheet" href="scripts.js" type="text/js">
+</head>
+<script>
+  let menuIcon = document.querySelector('.menuIcon');
+let nav = document.querySelector('.overlay-menu');
+
+menuIcon.addEventListener('click', () => {
+    if (nav.style.transform != 'translateX(0%)') {
+        nav.style.transform = 'translateX(0%)';
+        nav.style.transition = 'transform 0.2s ease-out';
+    } else { 
+        nav.style.transform = 'translateX(-100%)';
+        nav.style.transition = 'transform 0.2s ease-out';
+    }
+});
+
+/* Theme switcher */
+  function setTheme(themeName) {
+    localStorage.setItem('theme', themeName);
+    document.documentElement.className = themeName;
+  }
+
+  // function to toggle between light and dark theme
+  function toggleTheme() {
+    if (localStorage.getItem('theme') === 'theme-dark') {
+      setTheme('theme-light');
+    } else {
+      setTheme('theme-dark');
+    }
+  }
+
+// Toggle Menu Icon
+let toggleIcon = document.querySelector('.menuIcon');
+
+toggleIcon.addEventListener('click', () => {
+    if (toggleIcon.className != 'menuIcon toggle') {
+        toggleIcon.className += ' toggle';
+    } else {
+        toggleIcon.className = 'menuIcon';
+    }
+});
+</script>
+
+<body>
+  <nav>
+    <!--Begin van navigatiebalk-->
+    <div class="logo">
+      <!--Deze div is nodig voor de opmaak van het logo-->
+      <li>
+        <a href="index.html">
+          <img class="logoafbeelding" src="logo.png" alt="Logo isn't loading" width="auto" height="100">
+        </a>
+      </li>
+    </div>
+    <!--Afsluiten class="logo"-->
+    <ul class="navlinks">
+      <!--Lijst voor de pagina's. Met het CSS document wordt deze lijst horizontaal.-->
+
+      <li>
+        <a href="index.html" class="active"
+        >Home</a>
+        <!--Deel van lijst van de pagina's in navigatiebalk-->
+      </li>
+      <li>
+        <a href="shop.html">Shop</a>
+        <!--Deel van lijst van de pagina's in navigatiebalk-->
+      </li>
+      <li>
+        <a href="events.html">Events</a>
+        <!--Deel van lijst van de pagina's in navigatiebalk-->
+      </li>
+      <li>
+        <a href="about.html">About</a>
+        <!--Deel van lijst van de pagina's in navigatiebalk-->
+      </li>
+      <li>
+        <a href="help.html">Help</a>
+        <!--Deel van lijst van de pagina's in navigatiebalk-->
+      </li>
+    </ul>
+</nav>
+</body>
+
+</html>

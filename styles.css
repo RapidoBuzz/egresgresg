@@ -1,0 +1,57 @@
+/*General*/
+* {
+  transition: background 2s;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  transition: background 2s;
+  font-family: "Poppins", sans-serif;
+  background-color: var(--primary);
+}
+
+/*Color palletes*/
+.theme-light {
+  --color-primary: #ffd5d5;
+  --color-primary-second: #ffffff;
+  --color-secondary: #f13030;
+  --color-accent: #5a0001;
+  --font-color: #22181c;
+  --warning-color: #d66112;
+  --notification-color: #f8f272;
+}
+.theme-dark {
+  --color-primary: #1b1b1b;
+  --color-primary-second: #7e7e7e;
+  --color-secondary: #3f0e0e;
+  --color-accent: #9d0000;
+  --font-color: #f6e8ea;
+  --warning-color: #d66112;
+  --notification-color: #f8f272;
+}
+
+/*Nav*/
+.navbar {
+  background: white;
+  color: rgb(13, 26, 38);
+  position: fixed;
+  top: 0;
+  height: 60px;
+  line-height: 60px;
+  width: 100vw;
+  z-index: 10;
+}
+
+.navlist {
+  text-decoration: none;
+}
+
+.dark-lightmodebutton {
+  color: var(--primary);
+  background-color: none;
+}
+
+.homepagetitle {
+  text-transform: uppercase;
+  color: #1b1b1b
+}
